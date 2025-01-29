@@ -1,5 +1,6 @@
 body {
 	font-family: "Nunito", serif;
+	color: #2c2c2c;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,8 +13,21 @@ body {
 	height: 100vh;
 	padding: 20px;
 	align-items: center;
-	background-image: url("wallpaper.jpg");
+	background-color: #F7ECA8;
 }
+
+.quiz-container .card {
+
+	padding: 24px;
+	background-color: white;
+	
+}
+
+.quiz-container button {
+	background-color: #658A6E;
+	border: 0px;
+}
+
 
 
 .quiz-btn {
@@ -25,18 +39,17 @@ height: 70px;
 #quiz-img-cont {
 	display: flex;
 	justify-content: center;
+	height:200px;
 }
 
 #quiz-img-cont img {
-height:200px;
-}
-
-#quiz-qn-box {
-	background-image: url("box.svg");
+position: relative;
+bottom: -20px;
 }
 
 .header {
 	font-family: "Jua", serif;
+	color: #2c2c2c;
 }
 
 /* body {
