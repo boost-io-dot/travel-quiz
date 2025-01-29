@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link
+	  rel="stylesheet"
+	  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+	>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="quiz-container">
+
+        <div id="start-page">
+				<div class="block header is-size-1">
+					What’s Your Travel Vibe?
+				</div>
+				<div class="block is-size-5">
+					This fun quiz will reveal your ultimate travel style—and maybe even your ideal destination! Pack your (imaginary) bags and let’s go!
+				</div>
+				<div class="block">
+					<button class="button" id="start-button">Start Quiz</button>
+				</div>
+        </div>
+		
+		<div id="quiz-page" style="display: none;">
+
+				<progress class="progress" id="progress-bar" value="0" max="100"></progress>
+				<div id="quiz-qn-box">
+				<div class="block header is-size-5" id="quiz-question">
+					Question
+				</div>
+				<div class="block" id="quiz-img-cont">
+					<img id="quiz-img" src="#"></img>
+				</div>
+				</div>
+				<div class="block columns is-mobile is-multiline is-1" id="quiz-options">
+					
+					<div class="column is-half">
+						<button class="button is-small quiz-btn">Opt 1</button>
+					</div>
+					<div class="column is-half">
+						<button class="button is-small quiz-btn">Opt 1</button>
+					</div>
+					<div class="column is-half">
+						<button class="button is-small quiz-btn">Opt 1</button>
+					</div>
+					<div class="column is-half">
+						<button class="button is-small quiz-btn">Opt 1</button>
+					</div>
+				</div>
+		</div>
+		
+		<div id="results" style="display: none;">
+		</div>
+		
+	</div>
+    <script src="index.js"></script>
+  </body>
+</html>
