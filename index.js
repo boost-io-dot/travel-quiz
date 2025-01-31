@@ -1,5 +1,5 @@
 document.getElementById('start-button').addEventListener('click', function() {
-    startQuiz(); 
+    startQuiz();
 });
 
 let currentQuestion = 0;
@@ -27,7 +27,7 @@ let qns = [
   },
   {
 	quizImg: "images/home.svg",
-	question: "You’re back home. What do you do?",
+	question: "Last question! You’re back home. What do you do?",
 	answers: ["Unpack immediately—everything back in its place.", "Only unpack the essentials—the rest can wait.", "Leave your bag sitting there for a week.", "Why unpack? I’m already planning the next trip!"]
   }
  ];
@@ -45,18 +45,25 @@ for (let i = 0; i < quizBtns.length; i++) {
     quizBtns[i].addEventListener('click', nextQuestion, false);
 }
 
-function showResults() {
+function showResults1() {
 
 	document.getElementById('quiz-page').style.display = 'none';
-	document.getElementById('results').style.display = 'block';
-	
+	document.getElementById('results1').style.display = 'block';
+
 }
+
+let results2Btn = document.getElementById('trigger-results2');
+
+results2Btn.addEventListener("click", (event) => {
+		document.getElementById('results1').style.display = 'none';
+	document.getElementById('results2').style.display = 'block';
+});
 
 function nextQuestion() {
 	currentQuestion++;
 	console.log(currentQuestion);
 	if (currentQuestion == 6) {
-		showResults();
+		showResults1();
 		return;
 	}
 	let question = qns[currentQuestion-1];
@@ -72,3 +79,16 @@ function nextQuestion() {
 	}
 
 }
+
+let slide = document.querySelector("#polaroid-img ul li");
+let slidesContainer = document.querySelector("#polaroid-img ul");
+
+document.getElementById('polaroid-prev').addEventListener("click", (event) => {
+  let slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft -= slideWidth;
+});
+
+document.getElementById('polaroid-next').addEventListener("click", (event) => {
+  let slideWidth = slide.clientWidth;
+  slidesContainer.scrollLeft += slideWidth;
+});
